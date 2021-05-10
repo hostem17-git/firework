@@ -2,7 +2,7 @@ var canvas = document.querySelector("canvas");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-var sound = new Audio("cracker.mp3")
+var sound = new Audio("cracker2.mp3")
 var ctx = canvas.getContext("2d");
 var mouse={
     x:undefined,
