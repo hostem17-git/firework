@@ -16,7 +16,7 @@ addEventListener("resize",function(){
 });
 
 function getRandomColor(){
-    var colors =['#f21170','#72147e','#fa9905',"#ff5200"];
+    var colors =['#f21170','#72147e','#fa9905',"#ff5200",'#7b113a','#150e56','#1597bb','#8fd6e1','#72147e','#f21170','#fa9905','#ff5200','#fb3640','#542e71','#fdca40'];
     return colors[Math.floor(Math.random()*colors.length)]; 
 }
 
@@ -77,7 +77,7 @@ addEventListener("click",(event)=>{
     var angleIncrement = Math.PI * 2 / particleCount;
     var color = getRandomColor();
     for(var i=0;i<particleCount;i++){
-        particles.push( new Particle(mouse.x,mouse.y,5,color,{
+        particles.push( new Particle(mouse.x,mouse.y,5,getRandomColor(),{
             x:  Math.cos(angleIncrement*i) *Math.random()*particleSpeed,
             y: Math.sin(angleIncrement*i)*Math.random()*particleSpeed
                 }
