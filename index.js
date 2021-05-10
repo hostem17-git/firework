@@ -2,6 +2,7 @@ var canvas = document.querySelector("canvas");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
+var sound = new Audio("cracker.mp3")
 var ctx = canvas.getContext("2d");
 var mouse={
     x:undefined,
@@ -71,6 +72,7 @@ var particleSpeed = 12;
 addEventListener("click",(event)=>{
     mouse.x = event.clientX;
     mouse.y = event.clientY;
+    sound.play();
     var particleCount = 500;
     var angleIncrement = Math.PI * 2 / particleCount;
     var color = getRandomColor();
